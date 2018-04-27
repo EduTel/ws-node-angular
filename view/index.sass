@@ -1,0 +1,12 @@
+=random_color($cantidad)
+	$contador: 1
+	@while $cantidad > 0
+		tr
+			td
+				&:nth-child(#{$contador})
+					color: rgb(random(255),random(255),random(255))
+					font-size: 20px
+
+		$contador: $contador + 1
+		$cantidad: $cantidad - 1
++random_color(7)
