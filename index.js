@@ -5,7 +5,8 @@ var pug = require('pug'); //motor de vista
 app.set('views', 'view');
 app.set('view engine', 'pug');
 
-var get_estados = [[1, 2, 3], [4, 5, 6], [7]];
+var get_estados = [[1, 2, 3],[4, 5, 6], [7]];
+
 p_view = {
         h1        : 'Estados 1',
         estados_p : get_estados
@@ -14,10 +15,10 @@ p_view = {
 const view = pug.renderFile('view/index.pug', p_view);
 // GET method route
 app.get('/', function (req, res) {
-    res.render('index', {
-        h1: 'Estados 2',
-    });
-    //res.send(view);
+    //res.render('index', {
+    //    h1: 'Estados 2',
+    //});
+    res.send(view);
 });
 // POST method route
 //app.post('/', function (req, res) {
