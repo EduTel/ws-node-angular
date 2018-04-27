@@ -9,9 +9,8 @@ html(lang="en")
         h1!=h1
         .table-responsive.table-striped
             table.table.table-bordered
-                -array_multi=estados_p;
-                -console.log(array_multi);
-                each fila in array_multi
+                -console.log(estados_p);
+                each fila in estados_p
                     tr
                     each campo in fila
                         td=campo
