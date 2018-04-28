@@ -5,6 +5,9 @@ var pug = require('pug'); //motor de vista
 app.set('views', 'view');
 app.set('view engine', 'pug');
 
+var connect = require('connect');
+var sassMiddleware = require('node-sass-middleware');
+
 var get_estados = [[1, 2, 3],[4, 5, 6], [7]];
 
 p_view = {
