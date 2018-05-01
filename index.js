@@ -5,11 +5,20 @@ var pug = require('pug'); //motor de vista
 app.set('views', 'view');
 app.set('view engine', 'pug');
 
-var connect = require('connect');
+var connect        = require('connect');
 var sassMiddleware = require('node-sass-middleware');
-
+var srcPath = '_sass/index.sass';
+var destPath = '_styles/';
+//app.use('styles/', sassMiddleware);
+app.use(
+    sassMiddleware({
+        src: srcPath,
+        dest: destPath,
+        debug: true,
+        outputStyle: 'expanded'
+    })
+);
 var get_estados = [[1, 2, 3],[4, 5, 6], [7]];
-
 p_view = {
         h1        : 'Estados 1',
         estados_p : get_estados
@@ -28,5 +37,6 @@ app.get('/', function (req, res) {
 //    res.send(view);
 //});
 app.listen(3000, function () {
+    console.log("url: "+__dirname);
     console.log('Example app listening on port 3000!');
 });

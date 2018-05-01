@@ -6,10 +6,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
-        link(rel="stylesheet" type="text/css" href="index.css")
+        link(rel="stylesheet" type="text/css" href="style/index.css")
     body
         h1!=h1
         .table-responsive.table-striped
+            //tabla
             table.table.table-bordered
                 -console.log(estados_p);
                 each fila in estados_p
