@@ -21,6 +21,9 @@ app.use(
 var get_estados = [[1, 2, 3],[4, 5, 6], [7]];
 
 // GET method route
+app.get('/', function (req, res) {
+    res.redirect('/estados');
+});
 app.get('/:algo', function (req, res) {
     //res.render('index', {
     //    h1: 'Estados 2',
@@ -33,9 +36,6 @@ app.get('/:algo', function (req, res) {
     const view = pug.renderFile('view/index.pug', p_view);
     res.send(view);
 });
-//app.get('/:algo', function (req, res) {
-//    res.send(view);
-//});
 // POST method route
 app.post('/', function (req, res) {
     res.send(view);
