@@ -12,10 +12,10 @@ var destPath = '_styles/';
 //app.use('styles/', sassMiddleware);
 app.use(
     sassMiddleware({
-        src: srcPath,
-        dest: destPath,
-        debug: true,
-        outputStyle: 'expanded'
+        src         : srcPath,
+        dest        : destPath,
+        debug       : true,
+        outputStyle : 'expanded'
     })
 );
 var get_estados = [[1, 2, 3],[4, 5, 6], [7]];
@@ -29,11 +29,14 @@ app.get('/:algo', function (req, res) {
     //    h1: 'Estados 2',
     //});
     p_view = {
-        h1: req.params.algo,
+        titulo: req.params.algo,
         estados_p: get_estados
     };
     // Compile the source code
-    const view = pug.renderFile('view/index.pug', p_view);
+    var index = pug.renderFile('view/index.pug', p_view);
+    var view = pug.renderFile('view/header.pug', {
+        contenido: index
+    });
     res.send(view);
 });
 // POST method route
