@@ -34,6 +34,9 @@ app.use(
 //    res.redirect('/Estados');
 //});
 //app.get('/:algo', function (req, res, next) {
+//app.get('/css/index.css', function (req, res, next) {
+//    res.render('css/index.css');
+//});
 app.get('/', function (req, res, next) {
     //res.render('index', {
     //    h1: 'Estados 2',
