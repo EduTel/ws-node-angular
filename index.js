@@ -6,6 +6,8 @@ app.set('views', 'view');
 app.set('view engine', 'pug');
 //WS
 var soap = require('soap');
+//XML
+var parseString = require('xml2js').parseString;
 /*************************sass****************************/
 var connect        = require('connect');
 var sassMiddleware = require('node-sass-middleware');
@@ -63,6 +65,9 @@ app.get('/', function (req, res, next) {
         }
     );
     soap_estados.then((result) => {
+        parseString(result, function (err, result) {
+            console.dir(result);
+        });
         var get_estados = [
             [1, 2, 3],
             [4, 5, 6],
