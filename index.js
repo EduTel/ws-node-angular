@@ -12,9 +12,9 @@ var path           = require('path');
 //winston.level = 'debug';
 //var srcPath = 'sass/index.sass';
 var destPath = 'sass/';
+/*add Middleware*/
 app.use(
     sassMiddleware({
-        /* Options */
         src            : "compile/sass/",
         dest           : "css",
         debug          : true,
