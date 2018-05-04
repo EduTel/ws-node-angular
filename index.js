@@ -12,7 +12,7 @@ var path           = require('path');
 //winston.level = 'debug';
 //var srcPath = 'sass/index.sass';
 var destPath = 'sass/';
-/*add Middleware*/
+/*************************add Middleware**************************/
 app.use(
     sassMiddleware({
         src            : "compile/sass/",
@@ -28,6 +28,7 @@ app.use(
         //}
     })
 );
+app.use(express.static('static'));
 /*********************************************************/
 // GET method route
 //app.get('/', function (req, res, next) {
@@ -38,6 +39,10 @@ app.use(
 //    res.render('css/index.css');
 //});
 app.get('/', function (req, res, next) {
+    var f = new Date();
+    console.log('Request URL:', req.originalUrl);
+    console.log('Request Type:', req.method);
+    console.log('Time:', f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
     //res.render('index', {
     //    h1: 'Estados 2',
     //});
