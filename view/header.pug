@@ -5,14 +5,29 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title EduTel
-        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
+        // Latest compiled and minified CSS
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+        // Optional theme
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
         !=css
     body
-        !=contenido
-        h1 Tecnologias
-        img(src="nodejs.png" width='70px')
-        img(src="expressjs.png" width='70px')
-        img(src="sass.png" width='70px')
-        img(src="pug.png" width='70px')
+        div.container-fluid
+            !=contenido
+            div.row.center
+                div.col-xs-12
+                    h1 Tecnologias
+            div.row
+                div.col-xs-2
+                    img(src="nodejs.png" width='70px')
+                div.col-xs-2
+                    img(src="expressjs.png" width='70px')
+                div.col-xs-2
+                    img(src="pug.png" width='70px')
+                div.col-xs-2
+                    img(src="sass.png" width='70px')
+                div.col-xs-2
+                    img(src="bootstrap.png" width='70px')
+                div.col-xs-2
+                    img(src="angular.png" width='70px')
     footer
-        a(href='https://github.com/EduTel/ws-nusoap-php') github EduTel
+        a(href='https://github.com/EduTel/ws-nusoap-php') Github EduTel

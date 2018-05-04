@@ -53,7 +53,7 @@ app.get('/', function (req, res, next) {
     ];
     p_view = {
         //titulo    : req.params.algo,
-        titulo: 'Estados',
+        titulo: 'WS Estados',
         estados_p : get_estados
     };
     // Compile the source code
