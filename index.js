@@ -1,9 +1,11 @@
 var express = require('express');//manejador de servidor
 var app = express();
-
-var pug = require('pug'); //motor de vista
+//Motor de vista
+var pug = require('pug'); 
 app.set('views', 'view');
 app.set('view engine', 'pug');
+//WS
+var soap = require('soap');
 /*************************sass****************************/
 var connect        = require('connect');
 var sassMiddleware = require('node-sass-middleware');
@@ -28,7 +30,8 @@ app.use(
         //}
     })
 );
-app.use(express.static('static'));
+app.use('/cdn',express.static('static'));
+//app.use('/static_virtual', express.static('static'));
 /*********************************************************/
 // GET method route
 //app.get('/', function (req, res, next) {
@@ -46,22 +49,39 @@ app.get('/', function (req, res, next) {
     //res.render('index', {
     //    h1: 'Estados 2',
     //});
-    var get_estados = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7]
-    ];
-    p_view = {
-        //titulo    : req.params.algo,
-        titulo: 'WS Estados',
-        estados_p : get_estados
-    };
-    // Compile the source code
-    var index = pug.renderFile('view/index.pug', p_view);
-    var view  = pug.renderFile('view/header.pug', {
-        contenido: index
+    let soap_estados = new Promise(
+       (resolve, reject) => {
+            var url = "http://127.0.0.1/ws-nusoap-php/server.php?wsdl";
+            var params = {
+                pais: 'mexico'
+            };
+            soap.createClient(url, function (err, client) {
+                client.metodo_get_estados(params, function (err, result) {
+                    resolve(result.return.$value);
+                });
+            });
+        }
+    );
+    soap_estados.then((result) => {
+        var get_estados = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7]
+        ];
+        p_view = {
+            titulo   : 'WS Estados',
+            estados_p: get_estados,
+            xml_p    : result
+        };
+        // Compile the source code
+        var index = pug.renderFile('view/index.pug', p_view);
+        var view  = pug.renderFile('view/header.pug', {
+            contenido: index
+        });
+        res.send(view);
+        res.end();
+        console.log("end");
     });
-    res.send(view);
 });
 // POST method route
 app.post('/', function (req, res, next) {
