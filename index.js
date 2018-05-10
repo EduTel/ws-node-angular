@@ -84,8 +84,9 @@ app.get('/', function (req, res, next) {
         });
         get_estados = get_estados_array;
         p_view = {
-            titulo: 'WS Consumer Estados (https://github.com/EduTel/ws-nusoap-php.git)',
+            titulo: 'WS Consumer Estados',
             titulo_2 : 'Estados',
+            url: 'https://github.com/EduTel/ws-nusoap-php.git',
             estados_p: get_estados,
             xml_p    : result
         };
