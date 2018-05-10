@@ -7,7 +7,8 @@ app.set('view engine', 'pug');
 //WS
 var soap = require('soap');
 //XML
-var parseString = require('xml2js').parseString;
+var xml2js = require('xml2js');
+//var parser = new xml2js.Parser();
 /*************************sass****************************/
 var connect        = require('connect');
 var sassMiddleware = require('node-sass-middleware');
@@ -65,14 +66,26 @@ app.get('/', function (req, res, next) {
         }
     );
     soap_estados.then((result) => {
-        parseString(result, function (err, result) {
-            console.dir(result);
+        result.replace('<?xml version="1.0" encoding="UTF-8"?>', "");
+        xml2js.Parser().parseString( ("<data>"+result+"</data>"), function (err, result_xml) {
+            get_estados = result_xml.data.nombre;
         });
-        var get_estados = [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7]
-        ];
+        var get_estados_array = [[]];
+        get_estados_array[1] = [];
+        get_estados_array[1].push([4,5,6]);
+        console.log(get_estados_array[1]);
+        var contador = 0;
+        var fila = 0;
+        var split = 3;
+        get_estados.forEach(element => {
+            if ((contador % split)===0) {
+                fila++;
+                get_estados_array[fila] = [];
+            }
+            get_estados_array[fila].push(element);
+            contador++;
+        });
+        get_estados = get_estados_array;
         p_view = {
             titulo   : 'WS Estados',
             estados_p: get_estados,
