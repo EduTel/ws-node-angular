@@ -71,9 +71,6 @@ app.get('/', function (req, res, next) {
             get_estados = result_xml.data.nombre;
         });
         var get_estados_array = [[]];
-        get_estados_array[1] = [];
-        get_estados_array[1].push([4,5,6]);
-        console.log(get_estados_array[1]);
         var contador = 0;
         var fila = 0;
         var split = 3;
