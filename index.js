@@ -20,11 +20,11 @@ var destPath = 'sass/';
 /*************************add Middleware**************************/
 app.use(
     sassMiddleware({
-        src            : "compile/sass/",
-        dest           : "css",
-        debug          : true,
-        outputStyle    : 'compressed',
-        indentedSyntax : true,
+        src           : "compile/sass/",
+        dest          : "static/css",
+        debug         : true,
+        outputStyle   : 'compressed',
+        indentedSyntax: true,
         //prefix: __dirname
         //response      : true
         //prefix: '/prefix' // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/
