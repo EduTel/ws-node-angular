@@ -1,5 +1,14 @@
 const express = require('express'); //manejador de servidor
 const app = express();
+//**********************************Motor de vista**********************************
+//PUG
+var pug = require('pug');
+app.set('views', './app/views/compile/pug');
+app.set('view engine', 'pug');
+//app.configure('development', function () {
+//    app.locals.pretty = true;
+//});
+//app.use(express.methodOverride());
 
 //**********************************add Middleware**********************************
 //SASS
@@ -17,10 +26,6 @@ app.use(
     })
 );
 module.exports = function () {
-    //**********************************Motor de vista**********************************
-    var pug = require('pug');
-    app.set('views', './app/views/compile/pug');
-    app.set('view engine', 'pug');
     var index = require('../app/routes/index.server.router')(app);
     app.use('/cdn', express.static('./public/static'));
     return app;

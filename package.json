@@ -14,7 +14,8 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,5 +35,7 @@
   "bugs": {
     "url": "https://github.com/EduTel/ws-node-angular/issues"
   },
-  "homepage": "https://github.com/EduTel/ws-node-angular#readme"
+  "homepage": "https://github.com/EduTel/ws-node-angular#readme",
+  "pug-it": "pug app/views/compile/pug",
+  "pug-it:w": "pug app/views/compile/pug -P -w"
 }
