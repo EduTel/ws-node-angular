@@ -45,8 +45,8 @@ exports.render = function (req,res) {
             xml_p    : result
         };
         // Compile the source code
-        var index = pug.renderFile('app/views/compile/pug/index.pug', p_view);
-        var view  = pug.renderFile('app/views/compile/pug/header.pug', { contenido: index });
+        var index = pug.renderFile('./app/views/compile/pug/index.pug', p_view);
+        var view  = pug.renderFile('./app/views/compile/pug/header.pug', { contenido: index });
         res.send(view);
         res.end();
         console.log("end");

@@ -4,8 +4,10 @@
 		tr
 			td
 				&:nth-child(#{$contador})
-					color: rgb(random(255),random(255),random(255))
-					font-size: 20px
+					a
+						color: rgb(random(255),random(255),random(255))
+						font-size: 20px
+						cursor: pointer
 
 		$contador: $contador + 1
 		$cantidad: $cantidad - 1

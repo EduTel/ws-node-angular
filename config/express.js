@@ -8,11 +8,12 @@ var sassMiddleware = require('node-sass-middleware');
 var path           = require('path');
 app.use(
     sassMiddleware({
-        src: "./app/views/compile/sass/",
-        dest: "./public/static/css",
-        debug: true,
-        outputStyle: 'compressed',
+        src           : "./app/views/compile/sass/",
+        dest          : "./public/static/css",
+        debug         : true,
+        outputStyle   : 'compressed',
         indentedSyntax: true,
+        prefix        : '/cdn/css/'
     })
 );
 module.exports = function () {
