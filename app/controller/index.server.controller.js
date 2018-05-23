@@ -27,7 +27,7 @@ exports.render = function (req,res) {
         var get_estados_array = [[]];
         var contador          = 0;
         var fila              = 0;
-        var split             = 3;
+        var split             = 5;
         get_estados.forEach(element => {
             if ((contador % split)===0) {
                 fila++;

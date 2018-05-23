@@ -3,7 +3,9 @@ link(rel="stylesheet" type="text/css" href="cdn/css/index.css")
 <!--<script src="cdn/js/angular v1.6.10/angular.min.js"></script>-->
 script(src="cdn/js/view.js")
 center
-    span.titulos=titulo
+    div
+        img.mexico_icon_tiny(src="cdn/img/principal/mexico.png", alt="México")
+        span.titulos=titulo
         //-a(href=url)
 //-span.subtitulos #{titulo_2} (XML) 
 //-div.xml
@@ -13,14 +15,14 @@ div.panel.panel-primary
     div.panel-heading
         div.row
             .col-xs-6
-                span.subtitulos #{titulo_2} (HTML)
+                span.subtitulos #{titulo_2}
             .col-xs-6
                 div
                     span Busqueda : 
                     input(type='text', ng-model='search_model', placeholder='')
                 div
                     span.resaltar Numero de registros encontrados: {{result}}
-    div.panel-body.cero_padding
+    div.panel-body.cero_padding.conteiner_1
         nav(aria-label='breadcrumb')
             ol.breadcrumb
                 li.breadcrumb-item
