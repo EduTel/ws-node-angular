@@ -51,4 +51,4 @@ exports.render = function (req,res) {
         res.end();
         console.log("end");
     });   
-}
+};

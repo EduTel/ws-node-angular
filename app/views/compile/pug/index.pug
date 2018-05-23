@@ -10,8 +10,8 @@ center
     div.xml
         code=xml_p
     h4 #{titulo_2} (Organizados)
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    <h1>Hello {{yourName}}!</h1>
+    input(type='text', ng-model='search_model', placeholder='Busqueda')
+    h1 Numero de registros encontrados: {{result}}
     table.table.table-bordered
         //-console.log(estados_p);
         each fila in estados_p
@@ -19,4 +19,3 @@ center
             each campo in fila
                 td
                     a=campo
-    

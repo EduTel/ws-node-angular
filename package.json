@@ -35,7 +35,5 @@
   "bugs": {
     "url": "https://github.com/EduTel/ws-node-angular/issues"
   },
-  "homepage": "https://github.com/EduTel/ws-node-angular#readme",
-  "pug-it": "pug app/views/compile/pug",
-  "pug-it:w": "pug app/views/compile/pug -P -w"
+  "homepage": "https://github.com/EduTel/ws-node-angular#readme"
 }
