@@ -6,12 +6,25 @@ center
     h2=titulo
         a(href=url)  Github
 .table-responsive.table-striped
-    h3 #{titulo_2} (Crudo) 
+    h3 #{titulo_2} (XML) 
     div.xml
         code=xml_p
-    h4 #{titulo_2} (Organizados)
-    input(type='text', ng-model='search_model', placeholder='Busqueda')
-    h1 Numero de registros encontrados: {{result}}
+    div.row
+        .col-xs-6
+            h4 #{titulo_2} (HTML)
+        .col-xs-6
+            div
+                span Busqueda : 
+                input(type='text', ng-model='search_model', placeholder='')
+            div
+                h4 Numero de registros encontrados: {{result}}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Estados</a></li>
+            <li class="breadcrumb-item"><a href="#">Municipios</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Colonia</li>
+        </ol>
+    </nav>
     table.table.table-bordered
         //-console.log(estados_p);
         each fila in estados_p
