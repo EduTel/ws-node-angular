@@ -1,9 +1,7 @@
 module.exports = function (app) {
     var index = require('../controller/index.server.controller');
     //**********************************GET**********************************
-    app.get('/', index.render);
+    app.get('/', index.estados);
     //**********************************POST**********************************
-    //app.post('/', function (req, res, next) {
-    //    res.send(view);
-    //});
+    app.post('/', index.municipios);
 }
