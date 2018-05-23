@@ -38,7 +38,7 @@ exports.render = function (req,res) {
         });
         get_estados = get_estados_array;
         p_view = {
-            titulo   : 'WS Consumer Estados: ',
+            titulo   : 'Codigos postales',
             titulo_2 : 'Estados: ',
             url      : 'https://github.com/EduTel/ws-nusoap-php.git',
             estados_p: get_estados,
