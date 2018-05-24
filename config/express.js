@@ -29,4 +29,4 @@ module.exports = function () {
     var index = require('../app/routes/index.server.router')(app);
     app.use('/cdn', express.static('./public/static'));
     return app;
-}
+};

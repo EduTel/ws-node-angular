@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "jshint": "^2.9.5",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "typescript-eslint-parser": "^15.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +31,7 @@
     "angular",
     "consumo"
   ],
-  "author": "eduardo",
+  "author": "eduardo <eduardo_jonathan@outlook.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EduTel/ws-node-angular/issues"

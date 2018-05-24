@@ -1,14 +1,14 @@
 //**********************************Motor de vista**********************************
 var pug = require('pug');
 //**********************************Require**********************************
-var soap = require('soap'); //WS
+var soap   = require('soap'); //WS
 var xml2js = require('xml2js'); //XML
-var f = new Date();
+var f      = new Date();
 function array_ordenar(p_data,p_split=0) {
     var cast_array = [[]];
-    var contador = 0;
-    var fila = 0;
-    var split = p_split;
+    var contador   = 0;
+    var fila       = 0;
+    var split      = p_split;
     p_data.forEach(element => {
         if ((contador % split) === 0) {
             fila++;
@@ -19,17 +19,17 @@ function array_ordenar(p_data,p_split=0) {
     });
     return cast_array;
 }
-function soap_promise(p_url,p_metodo, p_params) {
-    var url = p_url;
-    var params = p_params;
-    let soap_estados = new Promise((resolve, reject) => {
-        soap.createClient(url, function (err, client) {
-            client[p_metodo](params, function (err, result) {
-                resolve(result.return.$value);
+function soap_promise(p_url=null,p_metodo=null, p_params=null) {
+    if (p_url !== null && p_params!=null){
+        let soap_estados = new Promise((resolve, reject) => {
+            soap.createClient(p_url, function (err, client) {
+                client[p_metodo](p_params, function (err, result) {
+                    resolve(result.return.$value);
+                });
             });
         });
-    });
-    return soap_estados;
+        return soap_estados;
+    }
 }
 module.exports.estados = function (req, res) {
     console.warn('Request URL:', req.originalUrl);
@@ -56,4 +56,4 @@ module.exports.estados = function (req, res) {
 };
 module.exports.busqueda = function (req, res) {
     console.warn('municipios');
-}
+};
