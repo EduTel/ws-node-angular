@@ -19,21 +19,23 @@ function array_ordenar(p_data,p_split=0) {
     });
     return cast_array;
 }
-exports.estados = function (req, res) {
-    console.warn('Request URL:', req.originalUrl);
-    console.warn('Request Type:', req.method);
-    console.warn('Time:', f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
+function soap_promise(p_url,p_metodo, p_params) {
+    var url = p_url;
+    var params = p_params;
     let soap_estados = new Promise((resolve, reject) => {
-        var url = "http://127.0.0.1/ws-nusoap-php/server.php?wsdl";
-        var params = {
-            pais: 'mexico'
-        };
         soap.createClient(url, function (err, client) {
-            client.metodo_get_estados(params, function (err, result) {
+            client[p_metodo](params, function (err, result) {
                 resolve(result.return.$value);
             });
         });
     });
+    return soap_estados;
+}
+module.exports.estados = function (req, res) {
+    console.warn('Request URL:', req.originalUrl);
+    console.warn('Request Type:', req.method);
+    console.warn('Time:', f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
+    soap_estados = soap_promise("http://127.0.0.1/ws-nusoap-php/server.php?wsdl", "metodo_get_estados", { pais: 'mexico' });
     soap_estados.then((result) => {
         result.replace('<?xml version="1.0" encoding="UTF-8"?>', "");
         xml2js.Parser().parseString( ("<data>"+result+"</data>"), function (err, result_xml) {
@@ -52,6 +54,6 @@ exports.estados = function (req, res) {
         res.end();
     });   
 };
-exports.municipios = function (req, res) {
+module.exports.busqueda = function (req, res) {
     console.warn('municipios');
 }
