@@ -5,20 +5,12 @@ const app = express();
 var pug = require('pug');
 app.set('views', './app/views/compile/pug');
 app.set('view engine', 'pug');
-//app.configure('development', function () {
-//    app.locals.pretty = true;
-//});
-//app.use(express.methodOverride());
-
 //**********************************add Middleware**********************************
 //SASS
 var connect        = require('connect');
 var sassMiddleware = require('node-sass-middleware');
 var path           = require('path');
 
-//import * as connect from 'connect';
-//import * as sassMiddleware from 'node-sass-middleware';
-//import * as path from 'path';
 app.use(
     sassMiddleware({
         src           : "./app/views/compile/sass/",
