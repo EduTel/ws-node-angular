@@ -1,3 +1,14 @@
 node_modules/
 public/static/css/
 public/static/css/index.css
+
+*.js
+app/controller/*.js
+app/controller/*.map
+app/router/*.js
+app/router/*.map
+app/views/*.js
+app/views/*.map
+
+config/*.map
+
