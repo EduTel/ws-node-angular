@@ -7,6 +7,7 @@ public/static/css/index.css
 app/controller/*.js
 app/controller/*.map
 app/router/*.js
+app/router/*.map
 app/views/*.js
 app/views/*.map
 
