@@ -3,7 +3,6 @@ public/static/css/
 public/static/css/index.css
 
 *.js
-*.map
 app/controller/*.js
 app/controller/*.map
 app/router/*.js
