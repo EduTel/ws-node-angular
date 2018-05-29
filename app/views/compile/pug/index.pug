@@ -30,11 +30,46 @@ div.panel.panel-primary
                 li.breadcrumb-item
                     a(href='#') Municipios
                 li.breadcrumb-item.active(aria-current='page') Colonia
-        .table-responsive    
-            table.table.table-bordered
-                //-console.log(estados_p);
-                each fila in estados_p
-                    tr
-                    each campo in fila
-                        td
-                            a=campo
+        //-.table-responsive    
+        table.table.table-bordered
+            //-console.log(estados_p);
+            each fila in estados_p
+                tr
+                each campo in fila
+                    td
+                        a=campo
+    //-<div class="bs-example" data-example-id="panel-without-body-with-table">
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel heading</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
