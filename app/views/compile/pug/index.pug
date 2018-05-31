@@ -30,14 +30,15 @@ div.panel.panel-primary
                 li.breadcrumb-item
                     a(href='#') Municipios
                 li.breadcrumb-item.active(aria-current='page') Colonia
-        //-.table-responsive    
+        //-.table-responsive
         table.table.table-bordered
             //-console.log(estados_p);
             each fila in estados_p
                 tr
-                each campo in fila
-                    td
-                        a=campo
+                each object in fila
+                    each val, index in object
+                        td
+                            a(id=''+index)=val
     //-<div class="bs-example" data-example-id="panel-without-body-with-table">
             <div class="panel panel-default">
                 <div class="panel-heading">Panel heading</div>

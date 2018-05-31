@@ -5,6 +5,6 @@ export module index_server_router {
         console.error(index);
         app.get('/', index.estados);
         //**********************************POST**********************************
-        app.post('/', index.busqueda);
+        app.post('/busqueda', index.busqueda);
     };
 }
