@@ -17,7 +17,7 @@ app.use(
         dest          : "./public/static/css",
         indentedSyntax: true,
         prefix        : '/cdn/css/',
-        debug: false,
+        debug         : false,
         //sourceMap: "./public/static/css",
         sourceMap     : true,
         //sourceComments: 'normal',
@@ -30,6 +30,20 @@ app.use(
         //force: !PROD
     })
 );
+var bodyParser = require('body-parser'); 
+app.use(bodyParser());
+app.use(bodyParser.json({ limit: '5mb' }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(function (req, res, next){
+    res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:3000');
+    //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 import { index_server_router } from '../app/routes/index.server.router';
 export module express_module {
     export function __express(): any{
