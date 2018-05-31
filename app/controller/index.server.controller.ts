@@ -1,5 +1,5 @@
 //import { Component, OnInit } from '@angular/core';
-//import { FormGroup, FormControl, Validators, FormsModule, } from '@angular/forms'; 
+//import { FormGroup, FormControl, Validators, FormsModule, } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 //**********************************Motor de vista**********************************
 var pug = require('pug');

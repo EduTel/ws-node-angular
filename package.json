@@ -76,5 +76,6 @@
     "url": "https://github.com/EduTel/ws-node-angular/issues"
   },
   "homepage": "https://github.com/EduTel/ws-node-angular#readme",
-  "babel": "inherit"
+  "babel": "inherit",
+  "private": true
 }
