@@ -1,5 +1,5 @@
-//import { Component, OnInit } from '@angular/core';
-//import { FormGroup, FormControl, Validators, FormsModule, } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 //**********************************Motor de vista**********************************
 var pug = require('pug');
@@ -53,8 +53,6 @@ module.exports.estados = function (req: any, res: any) {
         xml2js.Parser().parseString( (result), function (err:any, result_xml: any) {
             get_estados = result_xml.estados.estado;
         });
-        //console.dir(get_estados[0]["_"] );
-        //console.dir(get_estados[0]["$"].id);
         var result_array: any = array_ordenar(get_estados,4);
         console.log(  JSON.stringify(result_array) );
         var p_view = {
