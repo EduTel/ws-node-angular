@@ -17,9 +17,18 @@ ___
 ### Url  
 1. ***versiones de angular***  
 https://github.com/angular/code.angularjs.org  
+2. ***Tour of Heroes***  
+https://angular.io/tutorial  
+3. ***CLI Documentation***  
+https://github.com/angular/angular-cli/wiki  
+4. ***Angular blog***  
+https://blog.angular.io/  
+
 ### Comandos  
 1. ***descargar dependencias***  
 **npm install**
+2. ***Ejecutar Angular***  
+**ng serve --open**
 
 2. ***pruebas unitarias***  
-**npm run test ----code-coverage**
+**npm run test ----code-coverage**  
