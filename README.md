@@ -23,6 +23,8 @@ https://angular.io/tutorial
 https://github.com/angular/angular-cli/wiki  
 4. ***Angular blog***  
 https://blog.angular.io/  
+5. ***Tour of Heroes***  
+https://angular.io/tutorial  
 
 ### Comandos  
 1. ***descargar dependencias***  
