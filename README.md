@@ -25,12 +25,40 @@ https://github.com/angular/angular-cli/wiki
 https://blog.angular.io/  
 5. ***Tour of Heroes***  
 https://angular.io/tutorial  
+6. ***Repository***  
+https://github.com/angular/angular-cli/wiki  
+
+### Tecnologias
+* [Codelyzer](http://codelyzer.com/)  
+* [Angular](https://angular.io/)  
+* [Json](https://www.json.org/)  
+* [Git](https://git-scm.com/)  
+* [Github](https://github.com/)  
+* [Markdown](https://es.wikipedia.org/wiki/Markdown)  
+* [TSLint](https://palantir.github.io/tslint/)  
+* [TypeScript](https://www.typescriptlang.org/)  
+* [HTML](https://developer.mozilla.org/es/docs/Web/HTML)  
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)  
+* [SASS](https://sass-lang.com/)  
+* [karma](https://karma-runner.github.io/2.0/index.html)  
+* [Browserslist](https://github.com/browserslist/browserslist)  
+* [npm](https://www.npmjs.com/)  
+* [bootstrap](https://getbootstrap.com/)  
+* [XML](https://www.w3.org/XML/)  
+* [soap](https://www.w3.org/TR/soap/)  
+* [MVC](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador)  
+* [Webpack](https://webpack.js.org/)  
+* [Jshint](https://www.typescriptlang.org/)  
+* [Protractor](http://www.protractortest.org/#/)
 
 ### Comandos  
 1. ***descargar dependencias***  
 **npm install**
 2. ***Ejecutar Angular***  
 **ng serve --open**
-
-2. ***pruebas unitarias***  
+3. ***pruebas unitarias***  
 **npm run test ----code-coverage**  
+4. ***Crear componente***  
+**ng generate component nuevo**  
+
+

@@ -1,0 +1,48 @@
+=random_color($cantidad)
+	$contador: 1
+	@while $cantidad > 0
+		tr
+			td
+				&:nth-child(#{$contador})
+					a
+						font-size: 15px
+						cursor: pointer
+						color: black
+		$contador: $contador + 1
+		$cantidad: $cantidad - 1
++random_color(7)
+.center
+	text-align: center
+.div_tecnologia
+	.section
+		margin-top: 10px
+	img
+		width: 70px
+.breadcrumb
+	margin-bottom: 0px
+html
+	font-size: 12px
+.titulos
+	font-size: 22px
+	font-weight: bold
+.subtitulos
+	font-size: 18px
+.resaltar
+	font-weight: bold
+.cero_padding
+	padding: 0px
+.panel-primary
+	input
+		color: black
+.mexico_icon_tiny
+	width: 30px
+.conteiner_1
+	.table
+		margin-bottom: 0px
+.panel-primary
+	border-color: transparent !important
+.panel-primary>.panel-heading
+	border: 1px solid #ddd
+nav
+	border-left: 1px solid #ddd
+	border-right: 1px solid #ddd
