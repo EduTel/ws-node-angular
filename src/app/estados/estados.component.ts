@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estados.component.css']
 })
 export class EstadosComponent implements OnInit {
+  p_name = 'Jecelyn';
+  constructor() {
 
-  constructor() { }
-
-  ngOnInit() {
+  }
+  ngOnInit(){
   }
 
 }
