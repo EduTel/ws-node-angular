@@ -52,6 +52,8 @@ https://github.com/angular/angular-cli/wiki
 * [Protractor](http://www.protractortest.org/#/)
 
 ### Comandos  
+0. ***Crear proyecto con prefijo en los componentes***
+***ng new nggallery --prefix ng***
 1. ***descargar dependencias***  
 **npm install**
 2. ***Ejecutar Angular***  
