@@ -57,7 +57,7 @@ https://github.com/angular/angular-cli/wiki
 1. ***descargar dependencias***  
 **npm install**
 2. ***Ejecutar Angular***  
-**ng serve --open**
+**ng serve --open** || npm start 
 3. ***pruebas unitarias***  
 **npm run test ----code-coverage**  
 4. ***Crear componente***  
